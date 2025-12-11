@@ -42,7 +42,7 @@ export function AboutSection() {
             <div className="relative">
               <div className="absolute -inset-4 bg-[#c9a227]/20 rounded-lg -z-10" />
               <img
-                src="/kung-fu-student-training-traditional-martial-arts.jpg"
+                src="/shaolin-estepona/kung-fu-student-training-traditional-martial-arts.jpg"
                 alt="Estudiante practicando Kung-Fu"
                 className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
               />

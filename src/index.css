@@ -80,10 +80,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-[#1a1614] text-foreground font-sans antialiased;
+    overflow-x: hidden;
   }
+
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }

@@ -9,7 +9,7 @@ export function HeroSection() {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-16 lg:pt-20">
       <div className="absolute inset-0 z-0">
         <img
-          src="/shaolin-kung-fu-training-martial-arts-traditional-.jpg"
+          src="/shaolin-estepona/shaolin-kung-fu-training-martial-arts-traditional-.jpg"
           alt="Entrenamiento de Shaolin Kung-Fu"
           className="w-full h-full object-cover"
         />
@@ -17,7 +17,7 @@ export function HeroSection() {
       </div>
 
       <div
-        ref={ref}
+        ref={ref as React.RefObject<HTMLDivElement>}
         className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}

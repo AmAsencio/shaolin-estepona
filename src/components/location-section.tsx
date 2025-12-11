@@ -5,12 +5,11 @@ export function LocationSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLElement>()
 
   return (
-    <section ref={ref} className="py-20 lg:py-32 bg-[#faf8f5]">
+    <section ref={ref as any} className="py-20 lg:py-32 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <p className="text-[#8b1a1a] font-medium tracking-widest uppercase text-sm mb-4">Ubicación</p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1614] mb-4 text-balance">
@@ -24,9 +23,8 @@ export function LocationSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           <div
-            className={`bg-white border border-[#e5dfd8] rounded-lg p-6 lg:p-8 transition-all duration-700 ease-out delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-            }`}
+            className={`bg-white border border-[#e5dfd8] rounded-lg p-6 lg:p-8 transition-all duration-700 ease-out delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
+              }`}
           >
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 rounded-full bg-[#8b1a1a]/10 flex items-center justify-center shrink-0">
@@ -65,12 +63,11 @@ export function LocationSection() {
           </div>
 
           <div
-            className={`h-[300px] lg:h-auto min-h-[400px] rounded-lg overflow-hidden border border-[#e5dfd8] transition-all duration-700 ease-out delay-300 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-            }`}
+            className={`h-[300px] lg:h-auto min-h-[400px] rounded-lg overflow-hidden border border-[#e5dfd8] transition-all duration-700 ease-out delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+              }`}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25774.47889252!2d-5.175!3d36.4264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d2ed56b7f7a7d%3A0xa8b6e7b0e2c4e1a2!2sEstepona%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1699000000000!5m2!1ses!2ses"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6420.359206512499!2d-5.1495012237230124!3d36.429039588533286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0cd6a378969c2d%3A0xa4bc6d051cffb22b!2sGolden%20Boy%20Y%20Muaythai%20Estepona!5e0!3m2!1ses!2ses!4v1765128954068!5m2!1ses!2ses"
               width="100%"
               height="100%"
               style={{ border: 0 }}
