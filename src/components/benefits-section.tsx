@@ -39,12 +39,11 @@ export function BenefitsSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLElement>()
 
   return (
-    <section ref={ref} id="beneficios" className="py-20 lg:py-32 bg-[#faf8f5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} id="beneficios" className="py-20 lg:py-32 bg-[#faf8f5] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div
-          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <p className="text-[#8b1a1a] font-medium tracking-widest uppercase text-sm mb-4">Beneficios</p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1614] mb-4 text-balance">
@@ -60,9 +59,8 @@ export function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <Card
               key={index}
-              className={`bg-white border-[#e5dfd8] hover:border-[#8b1a1a]/50 transition-all duration-500 ease-out hover:shadow-lg group ${
-                isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-8"
-              }`}
+              className={`bg-white border-[#e5dfd8] hover:border-[#8b1a1a]/50 transition-all duration-500 ease-out hover:shadow-lg group ${isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-8"
+                }`}
               style={{ transitionDelay: isVisible ? `${150 + index * 100}ms` : "0ms" }}
             >
               <CardContent className="pt-6">

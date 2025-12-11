@@ -6,8 +6,8 @@ export function InstructorSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLElement>()
 
   return (
-    <section ref={ref as any} id="profesor" className="py-20 lg:py-32 bg-[#1a1614]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref as any} id="profesor" className="py-20 lg:py-32 bg-[#1a1614] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div
           className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}

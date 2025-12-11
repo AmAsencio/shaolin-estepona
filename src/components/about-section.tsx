@@ -4,13 +4,12 @@ export function AboutSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLElement>()
 
   return (
-    <section ref={ref} id="escuela" className="py-20 lg:py-32 bg-[#faf8f5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} id="escuela" className="py-20 lg:py-32 bg-[#faf8f5] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div
-            className={`order-2 lg:order-1 transition-all duration-700 ease-out ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-            }`}
+            className={`order-2 lg:order-1 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
+              }`}
           >
             <p className="text-[#8b1a1a] font-medium tracking-widest uppercase text-sm mb-4">Sobre la escuela</p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1614] mb-6 text-balance">
@@ -35,9 +34,8 @@ export function AboutSection() {
           </div>
 
           <div
-            className={`order-1 lg:order-2 transition-all duration-700 ease-out delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-            }`}
+            className={`order-1 lg:order-2 transition-all duration-700 ease-out delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+              }`}
           >
             <div className="relative">
               <div className="absolute -inset-4 bg-[#c9a227]/20 rounded-lg -z-10" />

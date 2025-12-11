@@ -6,8 +6,8 @@ export function HeroSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-16 lg:pt-20">
-      <div className="absolute inset-0 z-0">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-16 lg:pt-20 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/shaolin-estepona/shaolin-kung-fu-training-martial-arts-traditional-.jpg"
           alt="Entrenamiento de Shaolin Kung-Fu"
@@ -18,38 +18,33 @@ export function HeroSection() {
 
       <div
         ref={ref as React.RefObject<HTMLDivElement>}
-        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
+        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ease-out w-full ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
       >
         <div className="max-w-4xl mx-auto">
           <p
-            className={`text-[#c9a227] font-medium tracking-widest uppercase text-sm mb-4 transition-all duration-500 ease-out delay-100 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`text-[#c9a227] font-medium tracking-widest uppercase text-sm mb-4 transition-all duration-500 ease-out delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Gimnasio Golden Boy · Estepona
           </p>
           <h1
-            className={`font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight transition-all duration-500 ease-out delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight transition-all duration-500 ease-out delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Shaolin Kung-Fu Auténtico en Estepona
           </h1>
           <p
-            className={`text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed transition-all duration-500 ease-out delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed transition-all duration-500 ease-out delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Descubre el arte marcial milenario del Shaolin Kung-Fu. Clases para niños y adultos con enfoque en
             disciplina, respeto y desarrollo físico integral.
           </p>
 
           <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-500 ease-out delay-[400ms] ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-500 ease-out delay-[400ms] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             <Button
               asChild

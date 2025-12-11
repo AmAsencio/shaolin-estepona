@@ -26,12 +26,11 @@ export function ScheduleSection() {
   const [ref, isVisible] = useScrollAnimation<HTMLElement>()
 
   return (
-    <section ref={ref} id="horarios" className="py-20 lg:py-32 bg-[#1a1614]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} id="horarios" className="py-20 lg:py-32 bg-[#1a1614] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div
-          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-12 lg:mb-16 transition-all duration-600 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <p className="text-[#8b1a1a] font-medium tracking-widest uppercase text-sm mb-4">Horarios y grupos</p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#faf8f5] mb-4 text-balance">
@@ -47,9 +46,8 @@ export function ScheduleSection() {
           {schedules.map((schedule, index) => (
             <Card
               key={index}
-              className={`bg-white border-[#3a3230] hover:border-[#8b1a1a]/50 transition-all duration-500 ease-out hover:shadow-lg ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
+              className={`bg-white border-[#3a3230] hover:border-[#8b1a1a]/50 transition-all duration-500 ease-out hover:shadow-lg ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
               style={{ transitionDelay: isVisible ? `${200 + index * 150}ms` : "0ms" }}
             >
               <CardHeader className="pb-4">
